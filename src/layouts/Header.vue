@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <header class="header">
     <img class="header__logo" src="../assets/Logo.svg" alt="Logo" />
 
     <ul class="header__list">
@@ -29,7 +29,7 @@
         />
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
