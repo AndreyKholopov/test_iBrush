@@ -19,7 +19,15 @@ export default {
 
   methods: {
     login() {
-      console.log("login")
+      const url = "https://accounts.spotify.com/authorize"
+      const response_type = "code"
+      const scope = "user-read-private user-read-email"
+
+      window.location = `${url}?client_id=${
+        this.$globalData.client_id
+      }&response_type=${response_type}&redirect_uri=${encodeURI(
+        this.$globalData.redirect_uri
+      )}&scope=${encodeURI(scope)}`
     },
   },
 }
