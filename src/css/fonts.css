@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "OriyaMN";
+  src: local("OriyaMN"), local("OriyaMN"),
+    url("~@/assets/fonts/OriyaMN.woff") format("woff"),
+    url("~@/assets/fonts/OriyaMN.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OriyaMN";
+  src: local("OriyaMN"), local("OriyaMN"),
+    url("~@/assets/fonts/OriyaMN-Bold.woff") format("woff"),
+    url("~@/assets/fonts/OriyaMN-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
