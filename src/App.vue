@@ -117,5 +117,6 @@ export default {
 #app {
   min-width: 100vw;
   min-height: 100vh;
+  font-family: "OriyaMN", sans-serif;
 }
 </style>

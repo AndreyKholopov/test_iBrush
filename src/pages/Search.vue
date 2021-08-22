@@ -1,16 +1,31 @@
 <template>
-  <div class="search-page"></div>
+  <div class="search-page">
+    <div class="search-page__wrapper">
+      <my-header :userData="userData" />
+    </div>
+  </div>
 </template>
 
 <script>
+import Header from "../layouts/Header.vue"
+
 export default {
   name: "SearchPage",
+  components: {
+    "my-header": Header,
+  },
 
   props: {
     access_token: {
       type: String,
       default: "",
     },
+  },
+
+  data() {
+    return {
+      userData: {},
+    }
   },
 
   mounted() {
@@ -31,7 +46,7 @@ export default {
 
       if (response.ok) {
         const responceData = await response.json()
-        console.log("responceData: ", responceData)
+        this.userData = responceData
       } else {
         this.errorAllert("Произошла ошибка, попробуйте авторизоваться снова.")
       }
@@ -42,13 +57,16 @@ export default {
 
 <style lang="scss" scoped>
 .search-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #000 no-repeat url("../assets/Background.png");
   background-position: 0px 70vh;
   background-size: cover;
   width: 100vw;
   height: 100vh;
+
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
 }
 </style>
